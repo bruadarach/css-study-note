@@ -1,0 +1,33 @@
+/* 
+Objective 1 : Define the "General Rule" of CSS
+Objective 2 : Correctly include CSS in your HTML files
+Objective 3 : Select elements by tag name, class, and ID
+Objective 4 : Style elements with basic properties like color and background
+Objective 5 : Use Chrome CSS Inspector to debug HTML and CSS
+Exercise : CSS Selector Scavenger Hunt
+
+- 1) Define CSS and the role that it plays in WebDev
+# CSS : Cascading Style Sheets
+
+- 2) View websites before and after CSS has been added
+# useful source :  http://www.csszengarden.com
+
+- 3) Understand the "general rule" for CSS syntax
+*/
+
+/* The General rule */
+selector { 
+    property : value;
+}
+
+/* E.g.) Make All h1's purple and 565px font */
+h1 {
+    color: purple;
+    font-size: 56px;
+}
+
+/* E.g.) Give All img's a 3px red border*/
+img {
+    border-color: red;
+    border-width: 3px;
+}

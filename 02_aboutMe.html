@@ -1,0 +1,87 @@
+<!-- Where do we write our styles?
+
+    # Write our CSS inside a HTML file together
+    1. inline
+        : <h3 style="color: pink;">About Me</h3>
+        : <li style="color: purple;">Playing piano</li>
+
+    2. Style Tag : it selects all alies
+        : <html>
+            <head>
+                <title>About Me</title>
+                <style type="text/css">
+                    li{
+                        color: red;
+                    }
+                </style>
+            </head>
+        </html>
+-->
+
+<!-- # Write our CSS in a seperate CSS file
+    3. Using the <link> tag :
+       => put the <link> tag inside the <title> tag
+
+        (1) demoPage.html (file)
+        <html>
+            <head>
+                <title>Demo Page</title>
+                <link rel="stylesheet" type="text/css" href="app.css">
+            </head>
+            <body>
+            </body>
+        </html>
+
+        (2) app.css (file)
+        h1{
+            color: purple;
+            color: pink;
+        }
+-->
+
+<!-- New tags/attributes
+# style type="text/css"
+# selector {property: value;}
+# link tag
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Me</title>
+
+        <style type="text/css">
+        /*
+        selector {
+            property: value;
+        }
+        */
+
+        h1 { 
+            color: purple;
+        }
+ 
+        li {
+            color: orange;
+        }
+
+        /* the one that came after is applied in the final view*/
+        h1 {
+             color: blue;
+        }
+        
+        </style>
+    </head>
+    <body>
+        <h1>About Me</h1> 
+
+        <h4>My Hobbies:</h4>
+        <ul>
+            <li>Playing piano</li>
+            <li>Cooking</li>
+            <li>Reading</li>
+       <!-- <li style="color: purple;">Playing piano</li> -->
+        </ul>
+    
+    </body>
+</html>

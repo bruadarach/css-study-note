@@ -1,0 +1,18 @@
+/* Color in CSS
+
+2. Hexadecimal : String of 6 hexadecima numbers(from 0-F)
+                 https://www.webfx.com/web-design/color-picker/
+
+*/
+
+h1 {
+    color: #ffff11;
+}
+
+h2 {
+    color: #FF0000;
+}
+
+h3 {
+    color: #9FCAF0; 
+}

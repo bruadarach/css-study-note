@@ -1,0 +1,18 @@
+/* Color in CSS
+
+1. built-in colors: 147 colors
+   https://colours.neilorangepeel.com/
+
+*/
+
+h1 {
+    color: red;
+}
+
+h2 {
+    color: cornflowerblue
+}
+
+h3 {
+    color:darkorchid;
+}

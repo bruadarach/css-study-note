@@ -1,0 +1,38 @@
+/*  
+1. Color and Background - using built-in color, etc.
+: Use 'color' to set text color and 'background' for background color
+
+2. Background Image - using a photo online
+: The background property can also set a background image
+*/
+
+h1 {
+    color: rgb(97, 129, 148);
+    
+    /* how we get a border - 3 sets */
+    border-color: purple;
+    border-width: 5px;
+    border-style: solid;
+
+    /* or, the same above, but in one line - border solid */
+    border: 5px solid green;
+    /* and, border style - border dashed */
+    border: 5px dashed green;
+}
+
+h4 {
+    background: rgb(255,100,80)
+    /* what about a "dashed" boder */
+}
+
+body {
+    /* background - built-in color */
+    /* background: pink; */
+
+    /* background - using pictures online - 3 sets */
+    background: url(https://torange.biz/photo/29/IMAGE/wallpaper-desktop-spring-29891.jpg);
+    /* small-size picture is not repeated */
+    background-repeat: no-repeat; 
+    /* strectch the picture to the entire body */
+    background-size: cover;
+}

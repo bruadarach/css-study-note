@@ -1,0 +1,16 @@
+/* styling a specific element
+- a single element styling format ->  # + id name {} 
+- a class(a bunch of elements) styling format -> . + class name {}
+*/
+
+li {
+    border: 2px solid red;
+} 
+
+#special {
+    background-color: yellow;
+}
+
+.completed {
+     text-decoration: line-through;
+}

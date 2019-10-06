@@ -1,0 +1,67 @@
+/* Elements */
+li {
+
+}
+
+/* id */
+#name {
+
+}
+
+/* Class */
+.hello {
+
+}
+
+/* Star - select all, every single elements on the page */
+* {
+    border: 1px solid lightgrey;
+}
+
+/* Descendant Selector - takes two or more tags/selectors */ 
+/* li a - 'a' tags(=links) inside of 'li' inside of 'ul' */
+li a {
+    color : red;
+}
+
+/* Adjacent Selector - not nested inside*/
+/* elements come after another elements, so not nested inside */
+/* e.g) select all 'ul's come after h4 */
+h4 + ul {
+    border: 4px solid red;
+}
+
+/* Attribute Selector - select based on any attribute */
+/* select any a tag with href="http://www.google.com" */ 
+a[href="http://www.google.com"] {
+    background: blue;
+}
+
+/* often select based on "input[type=" "] */
+input[type="text"] {
+    background: blue;
+}
+
+input[type="checkbox"] {
+    background: blue;
+}
+
+/* nth of type */
+/* - takes numbers like 3 or 5, and then slices every end of specific element  */
+/* e.g) every third 'li's or only the thrid ul */
+
+/* only third ul */
+ul:nth-of-type(3) {
+    background: purple;
+}
+
+/* every third li's */
+li:nth-of-type(3) {
+    background: yellow;
+}
+
+/* every even li's */
+li:nth-of-type(even) {
+    background: pink;
+}
+

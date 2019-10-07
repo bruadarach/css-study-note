@@ -1,0 +1,118 @@
+<!---
+    # Specificity :
+        MDN defines Specificity as "The specificity is a weight 
+        that is applied to a given CSS declaration 
+        based on the count of each selector type."
+
+        Specificity is how the browser decides 
+        which rule applies if multiple rules have different selectors, 
+        but could still apply to the same element. 
+        It is basically a measure of how specific a selector's selection will be:
+
+     # Inheritance : 
+        Inheritance also needs to be understood in this context 
+        — some CSS property values set on parent elements are inherited by their child elements, 
+        and some aren't.
+
+        An element selector is less specific 
+        — it will select all elements of that type that appear on a page 
+        — so will get a lower score.
+
+        A class selector is more specific 
+        — it will select only the elements on a page that have a specific class attribute value 
+        — so will get a higher score.
+
+            e.g) As the body has been set to have a color of blue 
+                this is inherited through the descendants.
+
+            e.g) We can change the color 
+                by targetting the element with a selector, such as this span.
+-->
+    
+<!-- Specificity Calculator
+    : https://specificity.keegan.st/
+
+    # Least Specificity  to Highest Specificity
+
+    /* Type Selectrs */
+    
+    li {
+
+    }
+
+    li a {
+
+    }
+
+    li + a{
+
+    }
+
+    /* Class Attributes, and Pseudo-Class Selectors */
+    .hello {
+
+    }
+
+    input[type-"text"] {
+
+    }
+
+    a:hover
+    input:checked
+
+    /* ID Selectors */
+    # Hello
+
+-->
+
+<!--
+    e.g.) body and ul is overlapped, right?
+    in this case, the closer/narrower element/tag order is applied specifically
+    in other word, if you specifically pinpoint elements/tags, it is applied.
+-->
+
+<!--
+    you can check which color is applied/wins out via Google inspector - styles
+-->
+
+<!DOCTYPE html>
+<html  >
+<head>
+     <title>Specificity</title>
+     <style type="text/css">
+     body {
+         color: red;
+     }
+     ul {
+         color: blue;
+     }
+
+     li {
+         color: orange;
+     }
+
+    /* Class */ 
+     .highlight {
+         color: yellowgreen;
+     }
+
+     /* id */ 
+     #special {
+         color: pink;
+     }
+
+     </style>
+</head>
+<body>
+
+    <p>I MISS YOU!</p>
+    
+    <ul>
+        <li id = "special" class="highlight">David</li>
+        <li>Cas</li>
+        <li>Lisa</li>
+        <li class="highlight">Camile</li>
+    </ul>
+
+</body>
+</html> 

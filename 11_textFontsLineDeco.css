@@ -1,0 +1,62 @@
+/* font-family */
+
+p {
+    font-family: Aria;
+    /* font-family: "Arial"; - sometimes you have to add "", especially font name with numbers */
+}
+
+h1 {
+    font-family: Georgia;
+}
+
+/* font-size */
+
+body {
+    font-size: 10px
+}
+
+h1 {
+    font-size: 5.0em; /* 5 times larger */
+}
+
+p {
+    font-size: 2.0em; /* 2 times larger */
+}
+/* the spaned parts become double-sized, which is 'dynamic' */
+span {
+    font-size : 2.0em; /* 2 times larger */
+}
+
+/* font-weight */
+
+p {
+    font-weight: bold;
+    /* font-weight: normal; */
+    /* font-weight: 100 - 800 -> sometimes numeric is applicable to like Google fonts */
+}
+/* line-height (= line spacing) */
+
+p {
+    /* double spacing */
+    line-height: 1.5;
+}
+
+/* text-aligh */
+
+h1 {
+    text-align: right;
+}
+
+p {
+    text-align: center;
+}
+
+/* text-decoration */
+
+p {
+    text-decoration: underline;
+}
+
+h1 {
+    text-decoration: line-through;
+}

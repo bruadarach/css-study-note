@@ -1,0 +1,38 @@
+/* Box Model */
+
+p {
+
+    /* Content - Width and Height */
+        /* width: 200px;
+        height: 300px; */
+
+        /* 50% of the parents element - in thnis case, it is the 'body' / responsive! */ 
+    width: 50%;
+
+    /* Border */
+    border: 2px solid blue;
+
+    /* Padding */
+        /* padding: 10px; */
+    padding-left: 40px;
+
+    /* Margin */ 
+        /* margin: 100px; */
+        /* margin-top: 500px; */
+
+        /* margin : top, right, bottom, left */
+        /* margin: 20px 340px 500px 100px; */
+    
+        /* margin: 0 on the right & 0 on the left */
+        /* margin: 0 auto 0 auto; */
+    
+    /* top, bottom, left, right to 0 / short way to do */
+    /* 여기서 0값은 위 아래 여백을 주지 않는다는 의미이다. 
+       즉, margin: __;에서 __값은 좌우위아래 여백을 뜻하고, 여기에 '0'이 놓여졌으므로 좌우 위 아래 여백을 지정하지 않는다는 뜻!
+       auto는 가로 중앙에 배치한다는 뜻이다. 그리고 자연스럽게 좌우 여백은 균등하게 배분된다.
+       출처: https://hansolcha.tistory.com/4 */
+    margin: 0 auto;
+    
+    /* 20px on top, 50px on bottom */
+    margin: 50px 20px;
+}

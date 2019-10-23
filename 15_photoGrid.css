@@ -1,0 +1,21 @@
+img {
+    /* '%' is relative to the parent, which is 'body' */
+    /* 3 images fit in one line */
+    width: 30%;
+    float: left;
+    /* 3 evenly spaced images */
+    /* 6 margines, and 10% left out of 90%(30%*3) */
+    /* therefore, 10% / 6 = 1.66% */  
+    margin: 1.66%;
+}
+
+p {
+    font-family: 'Roboto Slab', serif;
+    margin-left: 1.66%;
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase; 
+    border-bottom: 2px solid #f1f1f1;
+    width: 30%;
+    padding-bottom: 10px;
+}

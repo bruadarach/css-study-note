@@ -1,0 +1,42 @@
+/* Teacher's solution*/
+body {
+    border: 20px solid #bdc3c7;
+    padding: 20px;
+
+    /* 최대 너비는 700px 고정으로 움직이었다가, 전체창이 80% 줄었을 때부터 바디 크기가 동적으로 줄어드는 모습? */
+    max-width: 700px;
+    width: 80%;
+
+    /* 0 for top and bottom, auto for left and right */
+    /* 20px for margin top */ 
+    margin: 30px auto;
+    font-family: Source Sans Pro;
+}
+
+.quote {
+    border-left: 5px solid #bdc3c7;
+    padding-left: 5px;
+}
+
+.date {
+    color: #3498db;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+h2 {
+    color: #2c3e50;
+    font-size: 2.0rem;
+}
+
+/* Gradient transparent - color - transparent */
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    margin-top: 30px;
+}
+
+.post {
+    margin-bottom: 30px;
+}

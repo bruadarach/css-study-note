@@ -1,0 +1,75 @@
+<!-- CSS(Cascading Style Sheets) 
+
+Cascading (적용우선순위 : 하나의 태그에 중첩되어 CSS가 적용되었을 때, 우선순위를 어떻게 할 것인가?)
+    : mechanisms that control which r
+    ule applies when there is such a conflict.
+    
+    - Cascading
+        : Stylesheets cascade — at a very simple level this means that the order of CSS rules matter; 
+        : when two rules apply that have equal specificity the one that comes last in the CSS is the one that will be used.
+
+    - Specificity
+        : Specificity is how the browser decides which rule applies if multiple rules have different selectors, 
+        : but could still apply to the same element. 
+        : It is basically a measure of how specific a selector's selection will be
+
+
+Useful Link : https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
+ -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            li{color:red;}
+            /* li{color:red !important; } !important를 붙이면 무적의 순위가 됨!*/
+            #idsel{color:powderblue;}
+            .classsel{color:gree;}
+        </style>
+    </head>
+
+    <body>
+        <ul>
+            <li>HTML</li>
+            <li id="idsel" class="classsel" style="color:powderblue">CSS</li>
+            <li>Javascript</li>
+        </ul>
+
+        <ol>
+            <li>style attribute</li> <!-- stype="" --> 
+            <li>id selector</li> <!-- id="idsel" / #idsel{} -->
+            <li>class selectors</li> <!-- class="classsel" / .classsel{}-->
+            <li>tag selector</li> <!-- <style> li{} </style> -->
+        </ol>
+    </body>
+</html>
+
+<!--
+    (1) What's the color of <li>CSS<li> in this case? 4. powderblue ! <li style="color:powderblue"> 
+
+        1. <style>  li{color: red;}  </style>
+        2. <style>  #idsel{color: blue;}   </style>
+        3. <style>  .classsel{color: green;}   </style>
+        4. <li id="idsel" class="classsel" style="color:powderblue">CSS</li>
+
+    (2) What's the color of <li>CSS<li> in this case 2. blue ! <li id="idsel"> #idsel{color:blue;}
+
+        1. <style>  li{color: red;}  </style>
+        2. <style>  #idsel{color: blue;}   </style>
+        3. <style>  .classsel{color: green;}   </style>
+        4. <li id="idsel" class="classsel">CSS</li>
+
+    (3) What's the color of <li>CSS<li> in this case 3. green ! <li class="classsel"> .classsel{color:green;}
+
+        1. <style>  li{color: red;}  </style>
+        2. 
+        3. <style>  .classsel{color: green;}   </style>
+        4. <li id="idsel" class="classsel">CSS</li>
+
+    (4) What's the color of <li>CSS<li> in this case 1. red ! li{color: red;}
+
+        1. <style>  li{color: red;}  </style>
+        2. 
+        3. 
+        4. <li id="idsel" class="classsel">CSS</li>
+-->

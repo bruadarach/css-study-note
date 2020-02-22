@@ -1,0 +1,68 @@
+<!-- pseudo class selectors
+
+    : A pseudo-class is used to define a special state of an element.
+
+    For example, it can be used to:
+
+        - Style an element when a user mouses over it
+        - Style visited and unvisited links differently
+        - Style an element when it gets focus
+
+    링크와 관련된 가상 클래스 선택자
+        :link - 방문한 적이 없는 링크
+        :visited - 방문한 적이 있는 링크
+        :hover - 마우스를 롤오버 했을 때 
+        :active - 마우스를 클릭했을 때 
+
+    위의 선택자는 순서대로 지정하는 것이 좋다. 
+    특히 visited의 경우는 보안상의 이유로 아래와 같은 속성만 변경이 가능. 
+
+        - color
+        - background-color
+        - border-color
+        - outline-color
+        - The color parts of the fill and stroke properties
+
+    see more at : https://www.w3schools.com/css/css_pseudo_classes.asp
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            a:link {
+                color: black;
+            } /* unvisited link */
+
+            a:visited {
+                color: red;
+            } /* visited link */
+
+            a:hover{
+                color:yellow;
+            } /* mouse over link */
+
+            a:active {
+                color:green;
+            } /* selected link */ 
+            /* when you click or (quickly double clikck on MAC), the color will be changed */
+            
+            a:focus {
+                color:white;
+            } /* mouse over first and then press the 'tab' key to focuse! */
+        
+            input:focus{
+                background-color:black;
+                color:white;
+            }
+        </style>  
+    </head>
+
+     <body>
+         <a href="https://opentutorials.org">방문함</a>
+         <a href="https://a.a">방문안함</a>
+
+         <input type="text">
+     </body>
+</html>

@@ -1,0 +1,63 @@
+<!-- Parent & Child Selector 
+
+    Example Practice : 
+        - <style> applied ONLY to li under ul :
+            ul li {color: red;}
+        
+        - <style> applied ONLY to DIRECT CHILD (li under ol only)
+            <ol id="lecture">
+            <li>HTML</li>
+            <li>CSS
+
+            #lecture>li {border: 1px solid red; color: blue;}
+
+            - (attribute) border : ONLY to DIRECT CHILD (li under ol only)
+            - (attribute) color : APPLY to ALL CHILD under #lecture
+-->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    ul li {
+        color: red;
+    } /* apply ONLY to li under ul */
+
+    #lecture>li {
+        border: 1px solid red;
+        color: blue;
+    } /* apply ONLY to li(= only direct child of ol) under ol */
+    
+    /*
+    속성 border : #lecture>li (ol > li) 중 #lecture안에서 직접적으로 연결된 자식 선택자에게만 적용됨
+    속성 color : #lecture안에 있기만 하면, (직접적으로 연결된 자식 선택자가 아닐지라도) 모두에게 적용됨 (<= '상속'과 관련된 속성)
+    */
+
+    ul,ol{
+        background-color: powderblue;
+    }
+    </style> 
+  </head>
+
+  <body>
+
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+
+    <ol id="lecture">
+      <li>HTML</li>
+      <li>CSS
+        <ol>
+          <li>selector</li>
+          <li>declaration</li>
+        </ol>
+      </li>
+      <li>JavaScript</li>
+    </ol>
+
+  </body>
+</html>

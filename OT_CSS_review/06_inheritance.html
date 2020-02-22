@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            /*
+            li{color: red;}
+            h1{color: red;}
+            */
+            html{color:red;} /* html 하위에 속하는 자식들도 폰트 컬러가 붉은색으로 자동 적용 */
+            #select{color:green;} /* html 하위 자식 중, 다른 폰트 컬러로 지정하고 싶다면 id와 #id를 사용하여 따로 지정 */
+            body{border:1px solid red;} 
+            /* body의 자식들인 h1, ul, li에는 상속받아 똑같이 붉은색 테두리가 생겼어야 하는데 안생긴 이유는?
+               : CSS의 여러 속성드링 모두 상속되는 것이 아님
+               : 어떤 속성은 상속되는 것이 유리하고, 어떤 속성은 상속되지 않는 것이 유리한 경우에 따라 선별적으로 동작함
+               : 따라서, 폰트의 컬러(color)는 상속이 되고, 테두리(border)는 상속되지 않음.
+
+               : 상속하는 속성과 상속하지 않는 속성
+               : 링크(CSS2 버전) => https://www.w3.org/TR/CSS2/propidx.html
+        </style>
+    </head>
+
+    <body>
+        <h1>수업내용</h1>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li id="select">Javascript</li>
+        </ul>
+    </body>
+</html>

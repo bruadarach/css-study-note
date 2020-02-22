@@ -1,0 +1,35 @@
+<!-- 선택자(Selector) 
+
+    Practice : only apply a font color to 'CSS'
+
+    How to do?
+        - 1. <li id="select">CSS</li>
+        - 2. #select{
+                color:blue;
+            }
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            li {
+                color:red; /* 폰트 컬러 */
+                text-decoration:underline; /* 밑줄 */
+            }
+
+            #select {
+                color:blue;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+ 
+    <body>
+        <ul>
+            <li>HTML</li>
+            <li id="select">CSS</li>
+            <li>Java Script</li>
+        </ul>
+    </body>
+</html>

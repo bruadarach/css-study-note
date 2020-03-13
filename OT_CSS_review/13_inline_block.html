@@ -1,0 +1,31 @@
+<!--
+    * HTML Element
+    
+        1. block-evel element : 화면 전체를 사용  
+            - h1 태그 : 자동 줄바꿈도 되지. 
+
+        2. inline-level element : 화면의 일부를 차지
+            - a 태그 : 자신과 자신을 둘러싸고 있는 
+
+    * block <-> inline 호환 방법?
+        : <style>
+            h1{display: inline}
+            a{display:block;}
+          </style>
+-->
+
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <style>
+        h1,a{border:1px solid red;}
+        h1{display:inline;}
+        a{display:block;}
+    </style>
+</head>
+<body>
+    <h1>Hello World</h1>
+    안녕하세요. <a href="http://opentutorials.org">여기로</a>다시 공부하러 왔습니다. 행복합니다.
+</body>
+</html>

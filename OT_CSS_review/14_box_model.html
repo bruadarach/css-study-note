@@ -1,0 +1,44 @@
+<!-- 
+    box model : 각각의 태그들이 웹페이지에 표현될 때, 그 태그의 부피감을 결정함. 여백, 위치, 크기
+    
+    1. block-level element (e.g p태그)
+        - padding, margin, width, height 모두 적용됨
+    
+    2. inline-level element (e.g a태그)
+        - padding, margin만 적용됨. width, height는 무시됨
+--> 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        p, a { /*
+            border-width: 10px;
+            border-style: solid;
+            border-color: red;
+            */
+            border: 10px solid red;
+            padding: 10px; /* 박스와 글자 사이 */
+            margin: 50px; /* padding 외의 간격. 박스 겉면과 다른 요소들 사이 */
+            width: 300px;/* P태그는 block-level element인데, 화면 전체를 쓰고 싶지 않다면 width를 지정해주면 됨 */
+        }
+    </style>
+</head>
+<body>
+    <p>
+        A blue rose is a flower of the genus Rosa (family Rosaceae) that presents blue-to-violet pigmentation instead of the
+        more common red, white, or yellow. Blue roses are often used to symbolise secret or unattainable love. 
+    </p>
+
+    <p>
+        However,
+        because of genetic limitations, they do not exist in nature. In 2004, researchers used genetic modification to create
+        roses that contain the blue pigment delphinidin.
+    </p>
+
+     <!-- inline-level element (a 태그) 에서는 어떻게 작동할까?
+          : 인라인 태그에서는 padding & margin 값은 적용되지만, width & height 값은 무시됨 !! -->
+     인라인 레벨에서는 어떻게 작동할까요? <a href="http://opentutorials.org">오픈튜토리얼</a> 확인해봅히다.
+</body>
+</html>

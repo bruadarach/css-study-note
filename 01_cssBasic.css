@@ -15,18 +15,24 @@ Exercise : CSS Selector Scavenger Hunt
 - 3) Understand the "general rule" for CSS syntax
 */
 
+
 /* The General rule */
-selector { 
-    property : value;
+
+selector {
+    property: value;
 }
 
+
 /* E.g.) Make All h1's purple and 565px font */
+
 h1 {
     color: purple;
     font-size: 56px;
 }
 
+
 /* E.g.) Give All img's a 3px red border*/
+
 img {
     border-color: red;
     border-width: 3px;

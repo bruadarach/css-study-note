@@ -1,31 +1,13 @@
-* {
-    box-sizing: border-box; /* 기본 스타일링 제거 reset */
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-
-}
-
-button {
-    cursor: pointer;
-}
-
-li {
-    list-style: none;
-}
-
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
     height: 100vh;
-    margin: 0; /* 기본 스타일링 제거 reset */
-    padding: 0; /* 기본 스타일링 제거 reset */
 }
 
 .calculator {
     width: 350px;
     height: 500px;
-    /* border: 1px solid blue; */
     display: flex;
     flex-direction: column;
     border-radius: 20px;
@@ -35,11 +17,41 @@ body {
 
 .display {
     display: flex;
-    flex-wrap: wrap;
     flex-grow: 1;
     position: relative;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgb(91,89,91);
+    font-size: 3em;
+    padding-right: 8%;
 }
 
+.display .calculator__display--bare {
+    display: none;
+}
+
+.display li > a {
+    position: absolute;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    top: 5%;
+}
+
+.display .circle1{
+    background-color: rgb(243,95,88);
+    left: 5%;
+}
+
+.display .circle2{
+    background-color: rgb(251,188,46);
+    left: 12%;
+}
+
+.display .circle3{
+    background-color: rgb(86,200,63);
+    left: 19%;
+}
 
 .buttons {
     display: flex;
@@ -47,75 +59,22 @@ body {
     flex-grow: 2;
 }
 
-
-.display.bare {
-    background-color: rgb(91,89,91);
-    color: #fff;
-    justify-content: flex-end;
-    align-items: center;
-    font-size: 3em;
-    padding-right: 2%;
-}
-
-.display.advanced {
-    display: none;
-}
-
-.display .circle1{
-    background-color: rgb(243,95,88);
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    position: absolute;
-    top: 5%;
-    left: 5%;
-
-}
-
-.display .circle2{
-    background-color: rgb(251,188,46);
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    position: absolute;
-    top: 5%;
-    left: 12%;
-
-}
-
-.display .circle3{
-    background-color: rgb(86,200,63);
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    position: absolute;
-    top: 5%;
-    left: 19%;
-
-}
-
-.button{
-    display:flex;
-    flex: 0 1 25%;
-    justify-content: center;
-    align-items: center;
+.button {
+    flex-basis: 25%;
     background-color: rgb(131,130,131);
     border: 1px solid rgb(94, 92, 94);
-    color: #fff;
     font-size: 1.5em;
+    cursor: pointer;
 }
 
-.double {
-    display:flex;
-    flex-grow: 2;
+.buttons .double {
+    flex-grow: 1;
 }
 
-.operator {
+.buttons .operator {
     background-color: rgb(248,159,14);
 }
 
-.function {
+.buttons .function {
     background-color: rgb(107, 105, 107);
 }
-
-

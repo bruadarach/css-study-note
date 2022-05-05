@@ -5,14 +5,19 @@ body {
     height: 100vh;
 }
 
+.container { 
+    background-color: rgb(91,89,91);
+    border-radius: 20px;
+    border: 1px solid rgb(94, 92, 94);
+}
+
 .calculator {
     width: 350px;
     height: 500px;
     display: flex;
     flex-direction: column;
-    border-radius: 20px;
+    border-radius: inherit;
     overflow: hidden;
-    border: 1px solid rgb(94, 92, 94);
 }
 
 .display {
@@ -21,7 +26,6 @@ body {
     position: relative;
     justify-content: flex-end;
     align-items: center;
-    background-color: rgb(91,89,91);
     font-size: 3em;
     padding-right: 8%;
 }
@@ -53,6 +57,55 @@ body {
     left: 19%;
 }
 
+.display .circle1:hover {
+    background-color: rgb(248, 132, 126);
+}
+
+.display .circle2:hover {
+    background-color: rgb(246, 213, 134);
+}
+
+.display .circle3:hover {
+    background-color: rgb(137, 199, 125);
+}
+
+.display .circles {
+    display: relative;
+}
+.display .circle1:before {
+    content: "x";
+    font-size: 14px;
+    color: rgb(68, 67, 68);
+    position: absolute;
+    top: -3px;
+    left: 4px;
+    display: none;
+}
+
+.display .circle2:before {
+    content: "−";
+    font-size: 14px;
+    color: rgb(68, 67, 68);
+    position: absolute;
+    top: -2px;
+    left: 3px;
+    display: none;
+}
+
+.display .circle3:before {
+    content: "+";
+    font-size: 14px;
+    color: rgb(68, 67, 68);
+    position: absolute;
+    top: -2px;
+    left: 2.6px;
+    display: none;
+}
+
+.display .circles>a:hover:before {
+    display: inline;
+}
+
 .buttons {
     display: flex;
     flex-wrap: wrap;
@@ -61,20 +114,47 @@ body {
 
 .button {
     flex-basis: 25%;
-    background-color: rgb(131,130,131);
     border: 1px solid rgb(94, 92, 94);
     font-size: 1.5em;
     cursor: pointer;
+    transition: all 0.1s ease;
 }
 
 .buttons .double {
     flex-grow: 1;
 }
 
-.buttons .operator {
-    background-color: rgb(248,159,14);
+.buttons .number {
+    background-color: rgb(131,130,131);
 }
 
 .buttons .function {
     background-color: rgb(107, 105, 107);
 }
+
+.buttons .operator {
+    background-color: rgb(248,159,14);
+}
+
+.buttons .number:hover, .buttons .function:hover {
+    background-color: rgb(182, 182, 182);
+    box-shadow: inset 2px 2px 2px rgb(0,0,0,0.7);
+}
+
+.buttons .operator:hover {
+    background-color: rgb(247, 197, 117);
+    box-shadow: inset 2px 2px 2px rgb(0,0,0,0.7);
+}
+
+.buttons .number:active {
+    background-color: rgb(131,130,131);
+}
+
+.buttons .function:active {
+    background-color: rgb(107, 105, 107);  
+}
+
+.buttons .operator:active {
+    background-color: rgb(248,159,14);
+}
+

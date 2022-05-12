@@ -8,9 +8,9 @@ function calculate(n1, operator, n2) {
   
     if (operator === '+') {
       result = Number(n1) + Number(n2);
-    } else if (operator === "-") {
+    } else if (operator === "−") {
       result = Number(n1) - Number(n2);
-    } else if (operator === "*") {
+    } else if (operator === "x") {
       result = Number(n1) * Number(n2);
     } else if (operator === "÷") {
       result = Number(n1) / Number(n2);
@@ -75,7 +75,7 @@ buttons.addEventListener('click', function (event) { // 버튼을 눌렀을 때 
             let finalResult = calculate(firstNum,operatorForAdvanced,previousNum)
 
             if (finalResult.includes('.')) {
-              finalResult = Number(finalResult).toFixed(8);
+              finalResult = Number(finalResult).toFixed(5);
               display.textContent = String(finalResult);
             }
             display.textContent = finalResult;
